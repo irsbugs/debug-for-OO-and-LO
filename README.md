@@ -1,10 +1,21 @@
 # debug for OpenOffice and LibreOffice
 
-If you ever used the BASIC programming language that is embedded in the OpenOffice/LibreOffice suite of applications, then you are likely to be disappointed with the builtin debugging facilities. To perform this type of debugging you enter command like:
+The BASIC programming language is embedded in each of the OpenOffice/LibreOffice suite of applications. BASIC includes three debugging facilities that reveal an objects properties, methods or supported interfaces. For example, with an object of oDoc, issue the commands:
 
-* msgbox oDoc.Dbg_Properties
-* msgbox oDoc.Dbg_Methods
-* msgbox oDoc.Dbg_SupportedInterfaces
+```
+msgbox oDoc.Dbg_Properties
+msgbox oDoc.Dbg_Methods
+msgbox oDoc.Dbg_SupportedInterfaces
+```
+
+Each command places their returned data into a Message dialog window. There are some issues with the Message dialog window that include:
+* Unable to cut and paste its contents.
+* Window may extend off the bottom of the screen
+* Returned data in not alphabetically sorted.
+
+The file debug.bas contains a debug subroutine and sorting function.
+
+
 
 
 
