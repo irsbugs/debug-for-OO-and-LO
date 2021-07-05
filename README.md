@@ -15,7 +15,7 @@ Each command places their returned data into a Message dialog window. There are 
 
 The file *debug.bas* contains a debug subroutine and sorting function. When writing a BASIC macro script for an OpenOffice/LibreOffice application add the two routines that are in *debug.bas*. Within the BASIC script place a call to the *debug()* routine. E.g.
 ```
-debug(oDoc)
+debug(oDocument)
 ```
 This *debug* sub-routine will:
 * Call the Dbg_properties, Dbg_Method and Dbg_supportInterfaces routines and collect their returned data.
@@ -30,7 +30,7 @@ sub ButtonPushEvent(ev as com.sun.star.awt.ActionEvent)
     ...
     debug(ev.source)
 ```
-The processing by debug will produce an output file that displays in an editor like this:
+The processing by *debug* will produce an output file that displays in an editor like this:
 ```
 Properties of object  "com.sun.star.form.OButtonControl":
 ARRAY        ImplementationId
